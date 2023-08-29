@@ -9,3 +9,8 @@ export const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const uiFontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--ui-font-sans",
+})

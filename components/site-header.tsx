@@ -1,52 +1,66 @@
-import Link from "next/link"
+'use client'
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
-import { MainNav } from "@/components/main-nav"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { siteConfig } from "@/config/site";
+import { MainNav } from "@/components/main-nav";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { MobileSidebar } from "./mobile-sidebar";
+import Logo from "./logo";
+import { buttonVariants } from "./ui/button";
 
 export function SiteHeader() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [headerClass, setHeaderClass] = useState("");
+  const bgGlassmorph = "bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10"
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+
+      // Calculez 1/4 de la hauteur de la fenêtre
+      const quarterHeight = window.innerHeight / 10;
+
+      // Si la position de défilement dépasse 1/4 de la hauteur de la fenêtre, changez la classe
+      if (position >= quarterHeight) {
+        setHeaderClass("bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-0");
+      } else {
+        setHeaderClass("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Nettoyez l'écouteur d'événements lors du démontage du composant
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="bg-background sticky top-0 z-40 w-full border-b">
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <MainNav items={siteConfig.mainNav} />
-        <div className="flex flex-1 items-center justify-end space-x-4">
+    <header className={`${headerClass} sticky top-0 z-40 w-full`}>
+      <div className="container flex h-12 items-center space-x-4 sm:justify-between sm:space-x-0">
+        <Link href="/" className="flex items-center space-x-2">
+          <Logo />
+        </Link>
+        <div className="flex  items-center justify-end space-x-4">
+          <MainNav items={siteConfig.mainNav} />
+        </div>
+        <div className="flex flex-1 md:flex-none items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
-            <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "icon",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.gitHub className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </div>
+            <Link href="https://app.supercontent.dev" className={buttonVariants({
+              variant: 'ghost',
+            })}>
+              Login
             </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "icon",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.twitter className="h-5 w-5 fill-current" />
-                <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
-            <ThemeToggle />
+            <div className="md:hidden">
+              <MobileSidebar items={siteConfig.mainNav} />
+            </div>
           </nav>
         </div>
       </div>
     </header>
-  )
+  );
 }
+
+
