@@ -15,10 +15,10 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col md:max-w-[700px] max-w-[400px] items-center gap-4">
                 <h1 className="text-3xl text-center bg-clip-text text-transparent font-black bg-gradient-to-r from-white to-gray-300 md:text-5xl">
-                Elevate Your E-commerce with Low-Code Power
+                Supercharge Your Website with Low-Code Back Office
                 </h1>
                 <p className="text-lg text-center text-muted-foreground">
-                    Simplify your ecommerce business with a low-code platform that allows you to build, manage and scale your business with ease.
+                Streamline your online presence with a Low-Code Back Office platform for effortless website growth and management.
                 </p>
             </div>
             <div className="flex flex-col justify-center items-center gap-4 md:flex-row">
