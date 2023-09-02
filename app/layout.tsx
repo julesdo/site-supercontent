@@ -33,7 +33,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        <head >
+        <script async src="https://analytics.supercontent.dev/script.js" data-website-id="0012e4f3-af17-481f-bb0b-f98520977bf7"></script>
+        </head>
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",

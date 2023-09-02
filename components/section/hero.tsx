@@ -22,7 +22,7 @@ export default function HeroSection() {
                 </p>
             </div>
             <div className="flex flex-col justify-center items-center gap-4 md:flex-row">
-                <Link className={buttonVariants({
+                <Link data-umami-event-linktoapp="Login" className={buttonVariants({
                     variant: 'gradient',
                     size: 'lg',
                 })} href="https://app.supercontent.dev">

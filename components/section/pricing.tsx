@@ -73,6 +73,7 @@ export default function Example() {
                                 variant={frequency.value === freq.value ? 'glassmorph' : 'ghost'}
                                 onClick={() => setFrequency(freq)}
                                 className="mx-1"
+                                data-umami-event-clicPricingFrequence={freq.value}
                             >
                                 {freq.label}
                             </Button>
@@ -107,6 +108,7 @@ export default function Example() {
                             <Link
                                 href={tier.href}
                                 aria-describedby={tier.id}
+                                data-umami-event-pricingChoice={tier.name}
                                 className={classNames(
                                     tier.mostPopular
                                         ? 'bg-primary text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-primary'
