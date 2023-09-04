@@ -14,10 +14,6 @@ export const siteConfig = {
       href: "/blog",
     },
     {
-      title: "Docs",
-      href: "#",
-    },
-    {
       title: "About",
       href: "#",
     }

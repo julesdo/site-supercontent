@@ -47,7 +47,10 @@ export function SiteHeader() {
           <MainNav items={siteConfig.mainNav} />
         </div>
         <div className="flex flex-1 md:flex-none items-center justify-end space-x-4">
-          <nav className="flex items-center space-x-1">
+          <nav className="flex items-center gap-2 space-x-1">
+          <a data-umami-event-docs="Docs" href="https://docs.supercontent.dev" className={buttonVariants()}>
+              Docs
+            </a>
             <Link data-umami-event-linktoapp="Login" href="https://app.supercontent.dev" className={buttonVariants({
               variant: 'ghost',
             })}>

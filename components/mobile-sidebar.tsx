@@ -23,6 +23,7 @@ interface MainNavProps {
   
   export const MobileSidebar = ({items}:MainNavProps) => {
     const pathname = usePathname()
+    const bgGlassmorph = "bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10"
     return (
       <Sheet>
         <SheetTrigger className={buttonVariants({
@@ -31,7 +32,7 @@ interface MainNavProps {
         })}>
             <MenuIcon size={24} />
         </SheetTrigger>
-        <SheetContent >
+        <SheetContent className={bgGlassmorph} >
           <SheetHeader>
             <Logo />
             <Separator />
