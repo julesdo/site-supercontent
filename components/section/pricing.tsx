@@ -126,17 +126,17 @@ export default function Example() {
                                 <span className="text-sm font-semibold leading-6 text-gray-300">{frequency.priceSuffix}</span>
                             </p>
                             <Link
-                                href={plan.id === 'freelancer' ? 'https://app.supercontent.dev' : '#'}
+                                href={plan.id === 'free' ? 'https://app.supercontent.dev' : '#'}
                                 aria-describedby={plan.id}
                                 data-umami-event-pricingChoice={plan.name}
                                 className={classNames(
-                                    plan.id === 'freelancer'
+                                    plan.id === 'free'
                                         ? 'bg-primary text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-primary'
                                         : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
                                     'mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
                                 )}
                             >
-                                {plan.id === 'free' ? (plan.active  ? 'Try 14-day free trial' : 'Get started') : 'Coming soon'}
+                                {plan.id === 'free' ? (plan.active  ? 'Get your free access' : 'Get started') : 'Coming soon'}
                             </Link>
                             <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
                                 {[
