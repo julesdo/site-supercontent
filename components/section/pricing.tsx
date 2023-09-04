@@ -102,7 +102,7 @@ export default function Example() {
                         <div
                             key={plan.id}
                             className={classNames(
-                                plan.id === 'freelancer' ? 'bg-white/5 ring-2 ring-primary' : 'ring-1 ring-white/10',
+                                plan.id === 'free' ? 'bg-white/5 ring-2 ring-primary' : 'ring-1 ring-white/10',
                                 'rounded-3xl p-8 xl:p-10'
                             )}
                         >
