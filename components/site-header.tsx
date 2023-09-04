@@ -7,7 +7,7 @@ import Link from "next/link";
 import { MobileSidebar } from "./mobile-sidebar";
 import Logo from "./logo";
 import { buttonVariants } from "./ui/button";
-import { FileText } from "lucide-react";
+import { FileText, User2Icon } from "lucide-react";
 
 export function SiteHeader() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -40,8 +40,8 @@ export function SiteHeader() {
 
   return (
     <header className={`${headerClass} sticky top-0 z-40 w-full`}>
-      <div className="container flex h-12 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <Link href="/" className="flex items-center space-x-2">
+      <div className="md:container px-4 flex h-12 items-center space-x-4 sm:justify-between sm:space-x-0">
+        <Link href="/" className="flex items-center">
           <Logo />
         </Link>
         <div className="flex  items-center justify-end space-x-4">
@@ -58,9 +58,17 @@ export function SiteHeader() {
               <FileText size={16} />
             </a>
             <Link data-umami-event-linktoapp="Login" href="https://app.supercontent.dev" className={buttonVariants({
-              variant: 'ghost',
+              variant: 'glassmorph',
+              className: 'hidden md:block'
             })}>
               Login
+            </Link>
+            <Link data-umami-event-linktoapp="Login" href="https://app.supercontent.dev" className={buttonVariants({
+              variant: 'glassmorph',
+              size: 'icon',
+              className: 'md:hidden',
+            })}>
+              <User2Icon size={16} />
             </Link>
             <div className="md:hidden">
               <MobileSidebar items={siteConfig.mainNav} />

@@ -32,7 +32,7 @@ interface MainNavProps {
         })}>
             <MenuIcon size={24} />
         </SheetTrigger>
-        <SheetContent className={bgGlassmorph} >
+        <SheetContent className='bg-gradient-to-b from-slate-950 to-indigo-950' >
           <SheetHeader>
             <Logo />
             <Separator />
