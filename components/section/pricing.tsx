@@ -48,7 +48,7 @@ export const plans = [
         price: { monthly: 49, annually: 470 },
         products: 50,
         posts: 100,
-        basicSupport: true,
+        basicSupport: false,
         active: true,
     },
     {
@@ -58,7 +58,7 @@ export const plans = [
         price: { monthly: 89, annually: 854 },
         products: 'Unlimited',
         posts: 'Unlimited',
-        basicSupport: true,
+        basicSupport: false,
         active: true,
     },
 ];
@@ -143,8 +143,7 @@ export default function Example() {
                                     `${plan.products} products`,
                                     `${plan.posts} posts`,
                                     'Stripe integration',
-                                    plan.basicSupport ? 'Basic support' : '',
-                                    'Marketing automations',
+                                    plan.basicSupport ? 'Basic support' : 'Premium support',
                                 ].map((feature, index) => (
                                     <li key={index} className="flex gap-x-3">
                                         <CheckIcon className="h-6 w-5 flex-none text-white" aria-hidden="true" />
