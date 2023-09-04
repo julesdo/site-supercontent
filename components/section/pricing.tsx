@@ -29,6 +29,7 @@ export const plans = [
         products: 5,
         posts: 10,
         basicSupport: true,
+        active: true,
     },
     {
         name: 'Freelancer',
@@ -109,7 +110,7 @@ export default function Example() {
                                 <h3 id={plan.id} className="text-lg font-semibold leading-8 text-white">
                                     {plan.name}
                                 </h3>
-                                {plan.id === 'freelancer' ? (
+                                {plan.id === 'free' ? (
                                     <p className="rounded-full bg-primary px-2.5 py-1 text-xs font-semibold leading-5 text-white">
                                         Most popular
                                     </p>
@@ -135,7 +136,7 @@ export default function Example() {
                                     'mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
                                 )}
                             >
-                                {plan.id === 'freelancer' ? (plan.active  ? 'Try 14-day free trial' : 'Get started') : 'Coming soon'}
+                                {plan.id === 'free' ? (plan.active  ? 'Try 14-day free trial' : 'Get started') : 'Coming soon'}
                             </Link>
                             <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
                                 {[
