@@ -7,6 +7,7 @@ import Link from "next/link";
 import { MobileSidebar } from "./mobile-sidebar";
 import Logo from "./logo";
 import { buttonVariants } from "./ui/button";
+import { FileText } from "lucide-react";
 
 export function SiteHeader() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -48,8 +49,13 @@ export function SiteHeader() {
         </div>
         <div className="flex flex-1 md:flex-none items-center justify-end space-x-4">
           <nav className="flex items-center gap-2 space-x-1">
-          <a data-umami-event-docs="Docs" href="https://docs.supercontent.dev" className={buttonVariants()}>
-              Docs
+          <a data-umami-event-docs="Docs" href="https://docs.supercontent.dev" target="_blank" className={buttonVariants(
+            {
+              size: 'icon',
+              variant: 'glassmorph',
+            }
+          )}>
+              <FileText size={16} />
             </a>
             <Link data-umami-event-linktoapp="Login" href="https://app.supercontent.dev" className={buttonVariants({
               variant: 'ghost',
