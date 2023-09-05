@@ -35,7 +35,7 @@ const features = [
   
   export default function Example() {
     return (
-      <div className="bg-indigo-950 py-0 sm:py-0">
+      <div id="features" className="bg-indigo-950 py-0 sm:py-0">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
   <div className="mx-auto max-w-2xl sm:text-center">
     <h2 className="text-base font-semibold leading-7 text-indigo-400">Elevate Your E-commerce</h2>

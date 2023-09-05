@@ -3,10 +3,6 @@
 import * as React from "react"
 import Link from "next/link"
 import { NavItem } from "@/types/nav"
-import { siteConfig } from "@/config/site"
-
-import { MobileSidebar } from "./mobile-sidebar"
-import Logo from "./logo"
 import { buttonVariants } from "./ui/button"
 import { usePathname } from "next/navigation"
 
@@ -15,7 +11,17 @@ interface MainNavProps {
 }
 
 export function MainNav({ items }: MainNavProps) {
-  const pathname = usePathname()
+  const pathname = usePathname();
+  const [id, setId] = React.useState("");
+
+  const handleClick = (itemHref: string) => {
+    const element = document.querySelector(itemHref);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setId(itemHref);
+    }
+  };
+
   return (
     <div className="flex gap-6 md:gap-10">
       {items?.length ? (
@@ -23,21 +29,25 @@ export function MainNav({ items }: MainNavProps) {
           {items?.map(
             (item, index) =>
               item.href && (
-                <Link
+                <a
                   key={index}
                   href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleClick(item.href!);
+                  }}
+                  data-umami-event-clickmenu={item.title}
                   className={buttonVariants({
-                    variant: pathname === item.href ? "glassmorph" : "ghost",
+                    variant: id === item.href ? "glassmorph" : "ghost",
                     size: "sm",
-                  })
-                  }
+                  })}
                 >
                   {item.title}
-                </Link>
+                </a>
               )
           )}
         </nav>
       ) : null}
     </div>
-  )
+  );
 }

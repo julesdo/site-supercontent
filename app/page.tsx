@@ -6,14 +6,16 @@ import HeroSection from "@/components/section/hero"
 import PreviewSection from "@/components/section/preview"
 import FeaturesSection from "@/components/section/features"
 import PricingSection from "@/components/section/pricing"
+import BlogSection from "@/components/section/blog"
 
 export default function IndexPage() {
   return (
-    <div className="w-full">
+    <div id="home" className="w-full scroll-smooth">
       <HeroSection />
       <PreviewSection />
       <FeaturesSection />
       <PricingSection />
+      <BlogSection />
     </div>
   )
 }

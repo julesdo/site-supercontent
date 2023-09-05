@@ -7,7 +7,7 @@ export default function HeroSection() {
     const grayTextGradient = "bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-600"
 
     return (
-        <section className="bg-background h-[50vh] justify-center text-left  grid items-center gap-6 pb-8 pt-6 md:py-24 bg-gradient-to-b from-slate-950 to-indigo-950">
+        <section id="home" className="bg-background h-[50vh] justify-center text-left  grid items-center gap-6 pb-8 pt-6 md:py-24 bg-gradient-to-b from-slate-950 to-indigo-950">
             <div className="flex flex-col justify-center items-center gap-4 md:flex-row">
                 <Badge variant="glassmorph" className="w-fit" >
                     Beta 1.00
