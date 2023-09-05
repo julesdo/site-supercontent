@@ -21,7 +21,8 @@ export default function HeroSection() {
                 Streamline your online presence with a Low-Code Back Office platform for effortless website growth and management.
                 </p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-4 md:flex-row">
+            <div className="flex flex-col justify-center items-center gap-4">
+            <a href="https://www.producthunt.com/posts/supercontent?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-supercontent" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=413074&theme=dark" alt="Supercontent - Supercharge&#0032;Your&#0032;Website&#0032;with&#0032;Low&#0045;Code&#0032;Back&#0032;Office | Product Hunt" style={{width: '250px', height: '44px'}} width="250" height="54" /></a>
                 <Link data-umami-event-linktoapp="Login" className={buttonVariants({
                     variant: 'gradient',
                     size: 'lg',
