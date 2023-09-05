@@ -6,8 +6,8 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 
 export const frequencies = [
-    { value: 'monthly', label: 'Monthly', priceSuffix: '/month' },
-    { value: 'annually', label: 'Annually', priceSuffix: '/year' },
+    { value: 'monthly', label: 'Monthly', priceSuffix: '/month/site' },
+    { value: 'annually', label: 'Annually', priceSuffix: '/year/site' },
 ]
 
 export const plans = [
