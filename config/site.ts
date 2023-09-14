@@ -18,6 +18,10 @@ export const siteConfig = {
       href: "#features",
     },
     {
+      title: "Free template",
+      href: "#template",
+    },
+    {
       title: "Pricing",
       href: "#pricing",
     },
