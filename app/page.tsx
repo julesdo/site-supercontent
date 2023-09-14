@@ -7,6 +7,7 @@ import PreviewSection from "@/components/section/preview"
 import FeaturesSection from "@/components/section/features"
 import PricingSection from "@/components/section/pricing"
 import BlogSection from "@/components/section/blog"
+import TemplateSection from "@/components/section/template"
 
 export default function IndexPage() {
   return (
@@ -14,6 +15,7 @@ export default function IndexPage() {
       <HeroSection />
       <PreviewSection />
       <FeaturesSection />
+      <TemplateSection />
       <PricingSection />
       <BlogSection />
     </div>
