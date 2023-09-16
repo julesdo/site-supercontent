@@ -29,6 +29,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head >
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link
+          rel="icon"
+          href="/icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="/apple-touch-icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
         <script async src="https://analytics.supercontent.dev/script.js" data-website-id="0012e4f3-af17-481f-bb0b-f98520977bf7"></script>
         </head>
         <body

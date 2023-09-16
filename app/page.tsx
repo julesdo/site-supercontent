@@ -17,7 +17,6 @@ export default function IndexPage() {
       <FeaturesSection />
       <TemplateSection />
       <PricingSection />
-      <BlogSection />
     </div>
   )
 }
