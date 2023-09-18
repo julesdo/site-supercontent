@@ -36,6 +36,7 @@ export default function TemplateSection() {
                         src="https://demo.supercontent.dev/"
                         className="w-full h-[500px] rounded-b-lg aspect-video"
                         frameBorder="0"
+                        loading="lazy"
                     ></iframe>
                 </div>
             </div>
