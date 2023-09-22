@@ -38,7 +38,7 @@ export function MainNav({ items }: MainNavProps) {
                   }}
                   data-umami-event-clickmenu={item.title}
                   className={buttonVariants({
-                    variant: id === item.href ? "glassmorph" : "ghost",
+                    variant: id === item.href ? "gradient" : "ghost",
                     size: "sm",
                   })}
                 >
