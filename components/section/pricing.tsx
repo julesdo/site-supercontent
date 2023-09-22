@@ -16,8 +16,8 @@ export const plans = [
         id: 'free',
         description: 'Essentials to get your business started.',
         price: { monthly: 0, annually: 0 },
-        products: 2,
-        posts: 5,
+        products: 4,
+        posts: 10,
         basicSupport: true,
         active: true,
     },
@@ -26,8 +26,8 @@ export const plans = [
         id: 'Individual',
         description: 'Essentials to get your business started.',
         price: { monthly: 9, annually: 85 },
-        products: 5,
-        posts: 10,
+        products: 10,
+        posts: 20,
         basicSupport: true,
         active: true,
     },
@@ -36,8 +36,8 @@ export const plans = [
         id: 'freelancer',
         description: 'Essentials for your work.',
         price: { monthly: 19, annually: 182 },
-        products: 10,
-        posts: 20,
+        products: 20,
+        posts: 40,
         basicSupport: true,
         active: true,
     },
@@ -46,8 +46,8 @@ export const plans = [
         id: 'startup',
         description: 'Scales with your business.',
         price: { monthly: 129, annually: 1239 },
-        products: 50,
-        posts: 100,
+        products: 100,
+        posts: 200,
         basicSupport: false,
         active: true,
     },
@@ -90,7 +90,7 @@ export default function Example() {
                                 variant={frequency.value === freq.value ? 'glassmorph' : 'ghost'}
                                 onClick={() => setFrequency(freq)}
                                 className="mx-1"
-                                data-umami-event-clicPricingFrequence={freq.value}
+                                data-umami-event-clicpricingfrequence={freq.value}
                             >
                                 {freq.label}
                             </Button>
@@ -128,7 +128,7 @@ export default function Example() {
                             <Link
                                 href={plan.id === 'free' ? 'https://app.supercontent.dev' : '#'}
                                 aria-describedby={plan.id}
-                                data-umami-event-pricingChoice={plan.name}
+                                data-umami-event-pricingchoice={plan.name}
                                 className={classNames(
                                     plan.id === 'free'
                                         ? 'bg-primary text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-primary'
